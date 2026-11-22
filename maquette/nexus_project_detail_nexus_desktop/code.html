@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-on-surface":"#2d3137","on-tertiary-fixed":"#2a1700","primary-fixed":"#6ffbbe","surface-container-lowest":"#0a0e14","primary":"#4edea3","surface-container":"#1c2026","surface-container-high":"#262a31","on-secondary-container":"#00374d","tertiary-fixed":"#ffddb8","tertiary-container":"#e29100","on-primary-fixed":"#002113","on-error-container":"#ffdad6","inverse-primary":"#006c49","on-background":"#dfe2eb","on-error":"#690005","secondary":"#7bd0ff","surface-tint":"#4edea3","on-primary-container":"#00422b","on-primary-fixed-variant":"#005236","on-primary":"#003824","surface-container-low":"#181c22","surface-bright":"#353940","on-tertiary-fixed-variant":"#653e00","tertiary":"#ffb95f","on-secondary-fixed-variant":"#004c69","secondary-container":"#00a6e0","secondary-fixed-dim":"#7bd0ff","on-tertiary-container":"#523200","on-secondary":"#00354a","inverse-surface":"#dfe2eb","on-tertiary":"#472a00","surface-dim":"#10141a","outline-variant":"#3c4a42","surface-container-highest":"#31353c","surface":"#10141a","outline":"#86948a","error-container":"#93000a","primary-fixed-dim":"#4edea3","surface-variant":"#31353c","on-surface":"#dfe2eb","background":"#10141a","error":"#ffb4ab","tertiary-fixed-dim":"#ffb95f","secondary-fixed":"#c4e7ff","on-surface-variant":"#bbcabf","on-secondary-fixed":"#001e2c","primary-container":"#10b981"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin":"1.5rem","margin-mobile":"1rem","space-lg":"1.25rem","space-md":"0.75rem","space-sm":"0.5rem","space-xs":"0.25rem","gutter":"1rem","space-xl":"1.75rem","gutter-sm":"0.75rem","gutter-lg":"1.5rem"},fontFamily:{"headline-xl":["Inter"],"code-lg":["JetBrains Mono"],"headline-lg":["Inter"],"label-xs":["JetBrains Mono"],"body-lg":["Inter"],"code-sm":["JetBrains Mono"],"headline-xl-mobile":["Inter"],"headline-md":["Inter"],"label-md":["JetBrains Mono"],"body-sm":["Inter"],"code-md":["JetBrains Mono"],"body-md":["Inter"]},fontSize:{"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.025em","fontWeight":"600"}],"code-lg":["13px",{"lineHeight":"18px","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-xs":["10px",{"lineHeight":"12px","letterSpacing":"0.05em","fontWeight":"600"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"-0.01em","fontWeight":"400"}],"code-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"400"}],"headline-xl-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-md":["18px",{"lineHeight":"26px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-md":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0em","fontWeight":"400"}],"code-md":["12px",{"lineHeight":"16px","letterSpacing":"0em","fontWeight":"400"}],"body-md":["13px",{"lineHeight":"18px","letterSpacing":"-0.005em","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased select-none"><aside class="fixed left-0 top-0 h-full w-[240px] bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="flex flex-col"><div class="h-14 px-gutter flex items-center justify-between bg-surface-container-low/80 backdrop-blur-md"><div class="flex items-center gap-space-sm"><div class="w-6 h-6 rounded bg-primary/10 flex items-center justify-center"><svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></div><span class="font-headline-md text-headline-md tracking-tight text-on-surface font-bold">Nexus</span></div><span class="font-label-xs text-label-xs px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-medium">v1.4</span></div><nav class="flex flex-col gap-space-xs px-gutter-sm mt-space-md" data-active-classes="bg-surface-container-high text-primary font-medium border-l-2 border-primary shadow-[inset_0_0_12px_rgba(78,222,163,0.06)]"><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">grid_view</span><span class="font-body-md text-body-md">Dashboard</span></div><span class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(78,222,163,0.8)]"></span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="projects" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">folder_code</span><span class="font-body-md text-body-md">Projects</span></div><span class="font-label-xs text-label-xs px-1.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant">12</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="tasks-and-todos" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">check_circle</span><span class="font-body-md text-body-md">Tasks &amp; TODOs</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="port-monitor" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">router</span><span class="font-body-md text-body-md">Port Monitor</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">tune</span><span class="font-body-md text-body-md">Settings</span></div></a></nav></div><div class="p-gutter-sm bg-surface-container-low flex flex-col gap-space-sm"><div class="flex items-center justify-between px-space-sm py-1.5 rounded bg-surface-container-lowest text-on-surface-variant"><div class="flex items-center gap-space-xs truncate"><span class="material-symbols-outlined text-[15px] text-outline">terminal</span><span class="font-code-sm text-code-sm truncate text-on-surface">~/Dev</span></div><button class="hover:text-primary transition-colors flex items-center justify-center p-0.5 rounded" type="button"><span class="material-symbols-outlined text-[14px]">sync</span></button></div><div class="flex items-center justify-between px-space-sm py-1"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-xs text-label-xs text-on-surface-variant tracking-wider uppercase">Daemon Online</span></div><span class="font-code-sm text-code-sm text-outline">:8099</span></div></div></aside><div class="pl-[240px]"><header class="fixed top-0 left-[240px] right-0 h-14 bg-surface/85 backdrop-blur-xl z-40 flex items-center justify-between px-gutter shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="flex items-center gap-space-md"><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md font-semibold text-on-surface">Workspace</span><span class="text-outline text-body-sm">/</span><span class="font-headline-md text-headline-md font-semibold text-on-surface-variant">Dashboard</span></div></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-2.5 text-[16px] text-outline pointer-events-none">search</span><input class="w-72 h-8 pl-8 pr-12 rounded bg-surface-container-lowest font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="Search projects, ports, or tasks..." type="text"/><div class="absolute right-2 flex items-center pointer-events-none"><kbd class="font-code-sm text-code-sm px-1 py-0.2 rounded bg-surface-container text-on-surface-variant">⌘K</kbd></div></div><button class="h-8 px-space-sm rounded bg-primary-container text-on-primary-container font-medium font-body-md text-body-md flex items-center gap-space-xs hover:bg-primary hover:text-on-primary transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">add</span><span>Scan Folder</span></button><div class="flex items-center gap-space-xs text-on-surface-variant"><button class="w-8 h-8 rounded flex items-center justify-center hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-14 px-gutter bg-surface min-h-screen"><div class="flex flex-col w-full pb-10 gap-space-lg">
+<!-- Dynamic Sub-Navigation / Status Row -->
+<div class="flex items-center justify-between py-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-code-sm text-code-sm">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+<span>Workspace</span>
+</a>
+<svg class="w-3 h-3 text-outline" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg>
+<a class="hover:text-primary transition-colors" href="#">Projects</a>
+<svg class="w-3 h-3 text-outline" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg>
+<span class="text-on-surface font-semibold bg-surface-container-high px-2 py-0.5 rounded">nexus-desktop</span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs font-code-sm text-code-sm text-outline">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+<span class="text-on-surface-variant">Watcher Active</span>
+<span class="text-surface-bright">•</span>
+<span>Synced just now</span>
+</div>
+<button class="flex items-center gap-1 px-2 py-1 rounded bg-surface-container-high hover:bg-surface-bright text-on-surface-variant hover:text-on-surface font-code-sm text-code-sm transition-colors" title="Force Repository Refresh">
+<svg class="w-3 h-3 text-primary" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"></path><path d="M16 21h5v-5"></path></svg>
+<span>Poll Now</span>
+</button>
+</div>
+</div>
+<!-- Hero Header Card -->
+<section class="w-full bg-surface-container-low rounded-xl p-space-lg flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg shadow-sm">
+<!-- Left Section: Meta & Identifiers -->
+<div class="flex flex-col gap-space-sm min-w-0">
+<!-- Title & Pills -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="w-9 h-9 rounded bg-surface-container-high flex items-center justify-center text-primary shadow-inner">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><rect height="14" rx="2" width="20" x="2" y="3"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">nexus-desktop</h1>
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-medium">v1.4.0</span>
+<div class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-code-sm text-code-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span>Online :1420</span>
+</div>
+</div>
+<!-- Path & Tech Monospace Badges -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center gap-1 px-2 py-1 rounded bg-surface-container-lowest text-on-surface-variant font-code-sm text-code-sm group">
+<svg class="w-3.5 h-3.5 text-outline group-hover:text-primary transition-colors" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path></svg>
+<span class="text-on-surface">~/Dev/nexus-desktop</span>
+<button class="ml-1 p-0.5 hover:text-primary transition-colors" onclick="navigator.clipboard.writeText('~/Dev/nexus-desktop')" title="Copy Path">
+<svg class="w-3 h-3 text-outline hover:text-on-surface" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="14" rx="2" ry="2" width="14" x="8" y="8"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+</button>
+</div>
+<div class="flex items-center gap-1 font-label-xs text-label-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">RUST</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">TAURI</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-secondary">REACT</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-secondary">TYPESCRIPT</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-tertiary">SQLITE</span>
+</div>
+</div>
+<!-- Git Telemetry Strip -->
+<div class="flex flex-wrap items-center gap-space-sm pt-0.5">
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-code-sm text-code-sm">
+<svg class="w-3.5 h-3.5 text-primary" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><line x1="6" x2="6" y1="3" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg>
+<span class="text-on-surface font-medium">main</span>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-code-sm text-code-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>2 uncommitted changes</span>
+</div>
+<div class="flex items-center gap-1.5 text-outline font-code-sm text-code-sm">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant">a8f91c2</span>
+<span class="truncate max-w-[280px] text-on-surface-variant">feat: add port scanner IPC handler</span>
+<span class="text-outline text-label-xs">• 14m ago</span>
+</div>
+</div>
+</div>
+<!-- Right Section: Action Controls -->
+<div class="flex flex-col sm:flex-row lg:flex-col items-start lg:items-end justify-between gap-space-sm shrink-0">
+<div class="flex items-center gap-space-xs">
+<button class="h-8 px-space-md rounded bg-primary text-on-primary font-medium font-body-md text-body-md flex items-center gap-1.5 hover:bg-primary-fixed transition-colors shadow-sm" type="button">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+<span>Open in IDE</span>
+<kbd class="font-code-sm text-label-xs px-1 py-0.2 bg-on-primary/15 rounded text-on-primary font-semibold ml-0.5">⌘O</kbd>
+</button>
+<button class="h-8 px-space-sm rounded bg-surface-container-high hover:bg-surface-bright text-on-surface font-body-md text-body-md flex items-center gap-1.5 transition-colors" type="button">
+<svg class="w-4 h-4 text-on-surface-variant" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" x2="20" y1="19" y2="19"></line></svg>
+<span>Terminal</span>
+<kbd class="font-code-sm text-label-xs px-1 py-0.2 bg-surface-container text-on-surface-variant rounded">^`</kbd>
+</button>
+</div>
+<!-- Quick External Destinations -->
+<div class="flex items-center gap-1 bg-surface-container-lowest p-1 rounded">
+<a class="w-7 h-7 rounded flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank" title="Repository">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+</a>
+<a class="w-7 h-7 rounded flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#" title="Jira Board">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="M7 7h10"></path><path d="M7 12h10"></path><path d="M7 17h4"></path></svg>
+</a>
+<a class="w-7 h-7 rounded flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#" title="Staging Environment">
+<svg class="w-3.5 h-3.5 text-secondary" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path><path d="m14.83 9.17 4.24-4.24"></path><path d="m14.83 14.83 4.24 4.24"></path><path d="m9.17 14.83-4.24 4.24"></path></svg>
+</a>
+<a class="w-7 h-7 rounded flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#" title="Production Instance">
+<svg class="w-3.5 h-3.5 text-primary" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+</a>
+<div class="w-px h-4 bg-surface-container-high"></div>
+<button class="w-7 h-7 rounded flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="More Project Actions">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+</button>
+</div>
+</div>
+</section>
+<!-- Main 2-Column Responsive Workspace Grid (60% / 40%) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN (60% ~ col-span-7) Tasks & Checklist -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<section class="bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-md shadow-sm">
+<!-- Card Header -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface">Tasks &amp; Checklist</h2>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-primary/10 text-primary font-code-sm text-code-sm" title="Path: ~/Dev/nexus-desktop/TODO.md">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Synced with TODO.md</span>
+</div>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<button class="w-7 h-7 rounded hover:bg-surface-container-high hover:text-on-surface flex items-center justify-center transition-colors" title="Reload TODO.md">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path><path d="M8 21H3v-5"></path></svg>
+</button>
+<button class="w-7 h-7 rounded hover:bg-surface-container-high hover:text-on-surface flex items-center justify-center transition-colors" title="Filter Tasks">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+</button>
+</div>
+</div>
+<!-- Inline Quick-Add Input Row -->
+<form class="flex items-center gap-space-xs bg-surface-container-lowest p-1 rounded" onsubmit="event.preventDefault();">
+<div class="relative flex-1 flex items-center">
+<svg class="w-4 h-4 absolute left-3 text-outline pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg>
+<input class="w-full h-8 pl-9 pr-3 bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none" placeholder="Add task to ~/Dev/nexus-desktop/TODO.md..." type="text"/>
+</div>
+<div class="relative shrink-0">
+<select class="appearance-none bg-surface-container-high text-on-surface-variant font-code-sm text-code-sm h-7 pl-2.5 pr-6 rounded focus:outline-none cursor-pointer">
+<option value="HIGH">HIGH</option>
+<option selected="" value="NORMAL">NORMAL</option>
+<option value="LOW">LOW</option>
+</select>
+<svg class="w-3 h-3 text-outline absolute right-1.5 top-2 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg>
+</div>
+<button class="w-7 h-7 rounded bg-primary text-on-primary flex items-center justify-center hover:bg-primary-fixed transition-colors shrink-0" type="submit">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg>
+</button>
+</form>
+<!-- Categorized Checklist Items -->
+<div class="flex flex-col gap-space-md mt-space-xs">
+<!-- In Progress & Priority Block -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-space-xs py-1">
+<span class="font-label-xs text-label-xs text-outline tracking-wider uppercase font-semibold">In Progress &amp; Priority (3)</span>
+<span class="font-code-sm text-code-sm text-outline">Priority Sorted</span>
+</div>
+<!-- Task 1: High Priority -->
+<div class="group flex items-center justify-between px-space-sm py-2 rounded bg-surface-container hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="text-outline cursor-grab opacity-40 group-hover:opacity-100 transition-opacity">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="9" cy="12" r="1"></circle><circle cx="9" cy="5" r="1"></circle><circle cx="9" cy="19" r="1"></circle><circle cx="15" cy="12" r="1"></circle><circle cx="15" cy="5" r="1"></circle><circle cx="15" cy="19" r="1"></circle></svg>
+</span>
+<input class="w-3.5 h-3.5 rounded bg-surface-container-lowest border-0 text-primary accent-primary cursor-pointer" type="checkbox"/>
+<div class="flex items-center gap-2 truncate">
+<span class="font-code-sm text-code-sm text-primary font-medium">[Core]</span>
+<span class="font-body-md text-body-md text-on-surface truncate">Implement Tauri port scanner background thread</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 ml-2">
+<span class="font-label-xs text-label-xs px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-semibold">HIGH</span>
+<span class="font-code-sm text-code-sm text-error flex items-center gap-1">
+<svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+<span>Today</span>
+</span>
+</div>
+</div>
+<!-- Task 2: Normal Priority -->
+<div class="group flex items-center justify-between px-space-sm py-2 rounded bg-surface-container hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="text-outline cursor-grab opacity-40 group-hover:opacity-100 transition-opacity">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="9" cy="12" r="1"></circle><circle cx="9" cy="5" r="1"></circle><circle cx="9" cy="19" r="1"></circle><circle cx="15" cy="12" r="1"></circle><circle cx="15" cy="5" r="1"></circle><circle cx="15" cy="19" r="1"></circle></svg>
+</span>
+<input class="w-3.5 h-3.5 rounded bg-surface-container-lowest border-0 text-primary accent-primary cursor-pointer" type="checkbox"/>
+<div class="flex items-center gap-2 truncate">
+<span class="font-code-sm text-code-sm text-secondary font-medium">[UI]</span>
+<span class="font-body-md text-body-md text-on-surface truncate">Add process memory footprint widget to sidebar</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 ml-2">
+<span class="font-label-xs text-label-xs px-1.5 py-0.5 rounded bg-surface-container-highest text-secondary font-medium">NORMAL</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Tomorrow</span>
+</div>
+</div>
+<!-- Task 3: Normal Priority -->
+<div class="group flex items-center justify-between px-space-sm py-2 rounded bg-surface-container hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="text-outline cursor-grab opacity-40 group-hover:opacity-100 transition-opacity">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="9" cy="12" r="1"></circle><circle cx="9" cy="5" r="1"></circle><circle cx="9" cy="19" r="1"></circle><circle cx="15" cy="12" r="1"></circle><circle cx="15" cy="5" r="1"></circle><circle cx="15" cy="19" r="1"></circle></svg>
+</span>
+<input class="w-3.5 h-3.5 rounded bg-surface-container-lowest border-0 text-primary accent-primary cursor-pointer" type="checkbox"/>
+<div class="flex items-center gap-2 truncate">
+<span class="font-code-sm text-code-sm text-tertiary font-medium">[DB]</span>
+<span class="font-body-md text-body-md text-on-surface truncate">Run SQLite migration for workspace config cache</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 ml-2">
+<span class="font-label-xs text-label-xs px-1.5 py-0.5 rounded bg-surface-container-highest text-secondary font-medium">NORMAL</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">In 2 days</span>
+</div>
+</div>
+</div>
+<!-- Completed Block -->
+<div class="flex flex-col gap-space-xs mt-space-sm">
+<div class="flex items-center justify-between px-space-xs py-1">
+<span class="font-label-xs text-label-xs text-outline tracking-wider uppercase font-semibold">Completed (2)</span>
+<button class="font-code-sm text-code-sm text-primary hover:underline">Archive Completed</button>
+</div>
+<!-- Task 4 (Completed) -->
+<div class="group flex items-center justify-between px-space-sm py-2 rounded bg-surface-container/60 hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="text-outline cursor-grab opacity-30">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="9" cy="12" r="1"></circle><circle cx="9" cy="5" r="1"></circle><circle cx="9" cy="19" r="1"></circle><circle cx="15" cy="12" r="1"></circle><circle cx="15" cy="5" r="1"></circle><circle cx="15" cy="19" r="1"></circle></svg>
+</span>
+<input checked="" class="w-3.5 h-3.5 rounded bg-primary text-on-primary accent-primary cursor-pointer" type="checkbox"/>
+<div class="flex items-center gap-2 truncate">
+<span class="font-code-sm text-code-sm text-outline font-medium line-through">[Build]</span>
+<span class="font-body-md text-body-md text-outline line-through truncate">Configure multi-platform cross-compilation pipeline</span>
+</div>
+</div>
+<span class="font-code-sm text-code-sm text-outline shrink-0 ml-2">2h ago</span>
+</div>
+<!-- Task 5 (Completed) -->
+<div class="group flex items-center justify-between px-space-sm py-2 rounded bg-surface-container/60 hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="text-outline cursor-grab opacity-30">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="9" cy="12" r="1"></circle><circle cx="9" cy="5" r="1"></circle><circle cx="9" cy="19" r="1"></circle><circle cx="15" cy="12" r="1"></circle><circle cx="15" cy="5" r="1"></circle><circle cx="15" cy="19" r="1"></circle></svg>
+</span>
+<input checked="" class="w-3.5 h-3.5 rounded bg-primary text-on-primary accent-primary cursor-pointer" type="checkbox"/>
+<div class="flex items-center gap-2 truncate">
+<span class="font-code-sm text-code-sm text-outline font-medium line-through">[IPC]</span>
+<span class="font-body-md text-body-md text-outline line-through truncate">Hook window focus listener to global shortcut ⌘+Space</span>
+</div>
+</div>
+<span class="font-code-sm text-code-sm text-outline shrink-0 ml-2">Yesterday</span>
+</div>
+</div>
+</div>
+<!-- Task Completion Metric & Footer -->
+<div class="pt-space-sm mt-space-xs flex flex-col gap-2">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant font-medium">2 of 5 completed <span class="text-outline">(40%)</span></span>
+<a class="text-primary hover:underline flex items-center gap-1" href="#">
+<span>Open in Editor</span>
+<svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
+</a>
+</div>
+<!-- Progress Bar Container -->
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500 ease-out" style="width: 40%"></div>
+</div>
+</div>
+</section>
+<!-- Git History Visual Log Module (Visual Richness / SVG Timeline) -->
+<section class="bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Commit Stream</h3>
+<span class="font-code-sm text-code-sm text-outline">Branch: main</span>
+</div>
+<span class="font-label-xs text-label-xs px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-mono">3 commits ahead</span>
+</div>
+<!-- Visual Branch Graph SVG & Commits -->
+<div class="flex flex-col gap-2 font-code-sm text-code-sm">
+<div class="flex items-start gap-space-sm group p-1.5 rounded hover:bg-surface-container transition-colors">
+<div class="flex flex-col items-center mt-1">
+<span class="w-2.5 h-2.5 rounded-full bg-primary ring-4 ring-primary/10"></span>
+<div class="w-0.5 h-8 bg-surface-container-highest my-0.5"></div>
+</div>
+<div class="flex-1 flex items-center justify-between min-w-0">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium truncate">feat: add port scanner IPC handler</span>
+<span class="text-outline text-label-xs">nexus-core / src-tauri/src/ports.rs</span>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="text-primary font-mono text-label-xs">a8f91c2</span>
+<span class="text-outline text-label-xs">14m ago</span>
+</div>
+</div>
+</div>
+<div class="flex items-start gap-space-sm group p-1.5 rounded hover:bg-surface-container transition-colors">
+<div class="flex flex-col items-center mt-1">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<div class="w-0.5 h-8 bg-surface-container-highest my-0.5"></div>
+</div>
+<div class="flex-1 flex items-center justify-between min-w-0">
+<div class="flex flex-col">
+<span class="text-on-surface truncate">fix: reconcile orphan process ports on exit</span>
+<span class="text-outline text-label-xs">daemon / sys_watcher.rs</span>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="text-secondary font-mono text-label-xs">4b209e1</span>
+<span class="text-outline text-label-xs">3h ago</span>
+</div>
+</div>
+</div>
+<div class="flex items-start gap-space-sm group p-1.5 rounded hover:bg-surface-container transition-colors">
+<div class="flex flex-col items-center mt-1">
+<span class="w-2.5 h-2.5 rounded-full bg-surface-bright"></span>
+</div>
+<div class="flex-1 flex items-center justify-between min-w-0">
+<div class="flex flex-col">
+<span class="text-on-surface-variant truncate">refactor: use JetBrains Mono metrics in shell</span>
+<span class="text-outline text-label-xs">frontend / tailwind.config.js</span>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="text-outline font-mono text-label-xs">91f03d8</span>
+<span class="text-outline text-label-xs">1d ago</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN (40% ~ col-span-5) Telemetry & Endpoints -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Top Card: Active Local Processes -->
+<section class="bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Active Local Processes</h3>
+<span class="font-label-xs text-label-xs px-2 py-0.5 rounded bg-primary/10 text-primary font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+              Live 2s
+            </span>
+</div>
+<button class="font-code-sm text-code-sm text-error hover:bg-error-container hover:text-on-error-container px-2 py-0.5 rounded transition-colors font-medium">Kill All</button>
+</div>
+<!-- Monospace Process Rows -->
+<div class="flex flex-col gap-space-xs font-code-sm text-code-sm">
+<!-- Row 1: Vite Frontend -->
+<div class="flex flex-col p-space-sm rounded bg-surface-container gap-2 hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="text-primary font-bold tracking-tight text-code-lg font-code-lg">:1420</span>
+<span class="text-on-surface font-medium">Vite Frontend</span>
+</div>
+<div class="flex items-center gap-1">
+<a class="p-1 rounded text-outline hover:text-primary transition-colors" href="http://localhost:1420" rel="noopener noreferrer" target="_blank" title="Open localhost:1420">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
+</a>
+<button class="px-2 py-0.5 rounded bg-error-container/20 hover:bg-error-container text-error hover:text-on-error-container text-label-xs font-semibold transition-colors">Kill</button>
+</div>
+</div>
+<div class="flex items-center justify-between text-outline text-label-xs pt-1">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="text-primary uppercase">LISTENING</span>
+<span>•</span>
+<span class="text-on-surface-variant font-mono">PID 31284</span>
+</div>
+<span class="text-on-surface-variant font-mono">64.2 MB</span>
+</div>
+</div>
+<!-- Row 2: Tauri Rust Daemon -->
+<div class="flex flex-col p-space-sm rounded bg-surface-container gap-2 hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="text-primary font-bold tracking-tight text-code-lg font-code-lg">:8899</span>
+<span class="text-on-surface font-medium">Tauri Core IPC Socket</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2 py-0.5 rounded bg-error-container/20 hover:bg-error-container text-error hover:text-on-error-container text-label-xs font-semibold transition-colors">Kill</button>
+</div>
+</div>
+<div class="flex items-center justify-between text-outline text-label-xs pt-1">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="text-primary uppercase">LISTENING</span>
+<span>•</span>
+<span class="text-on-surface-variant font-mono">PID 31290</span>
+</div>
+<span class="text-on-surface-variant font-mono">28.5 MB</span>
+</div>
+</div>
+</div>
+<!-- Telemetry Summary Bar -->
+<div class="flex items-center justify-between px-space-sm py-2 rounded bg-surface-container-lowest font-code-sm text-code-sm">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<svg class="w-3.5 h-3.5 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+<span>Total Memory:</span>
+<span class="text-on-surface font-medium font-mono">92.7 MB</span>
+</div>
+<div class="flex items-center gap-1 text-outline">
+<span>Uptime:</span>
+<span class="text-on-surface-variant font-mono">3h 42m</span>
+</div>
+</div>
+</section>
+<!-- Bottom Card: Configured Ports & Endpoints -->
+<section class="bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-md shadow-sm">
+<div class="flex flex-col">
+<h3 class="font-headline-md text-headline-md text-on-surface">Configured Ports &amp; Endpoints</h3>
+<p class="font-body-sm text-body-sm text-outline">Parsed dynamically from repository config tree</p>
+</div>
+<!-- Config Port Mapping Table -->
+<div class="flex flex-col gap-space-xs font-code-sm text-code-sm">
+<!-- Row 1: Active 1420 -->
+<div class="flex items-center justify-between p-space-sm rounded bg-surface-container">
+<div class="flex items-center gap-space-sm">
+<span class="font-mono text-primary font-semibold">:1420</span>
+<div class="flex flex-col">
+<span class="text-on-surface">package.json</span>
+<span class="text-outline text-label-xs">scripts.dev</span>
+</div>
+</div>
+<span class="font-label-xs text-label-xs px-2 py-0.5 rounded bg-primary/10 text-primary font-medium">Active</span>
+</div>
+<!-- Row 2: Offline 8080 -->
+<div class="flex items-center justify-between p-space-sm rounded bg-surface-container">
+<div class="flex items-center gap-space-sm">
+<span class="font-mono text-outline font-semibold">:8080</span>
+<div class="flex flex-col">
+<span class="text-on-surface">.env.local</span>
+<span class="text-outline text-label-xs">VITE_API_URL</span>
+</div>
+</div>
+<span class="font-label-xs text-label-xs px-2 py-0.5 rounded bg-surface-container-highest text-outline font-medium">Offline</span>
+</div>
+<!-- Row 3: Conflict 5432 -->
+<div class="flex items-center justify-between p-space-sm rounded bg-surface-container">
+<div class="flex items-center gap-space-sm">
+<span class="font-mono text-tertiary font-semibold">:5432</span>
+<div class="flex flex-col">
+<span class="text-on-surface">docker-compose.yml</span>
+<span class="text-outline text-label-xs">services.db</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1 font-label-xs text-label-xs px-2 py-0.5 rounded bg-tertiary/15 text-tertiary font-semibold">
+<svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" x2="12" y1="9" y2="13"></line><line x1="12" x2="12.01" y1="17" y2="17"></line></svg>
+<span>Conflict :5432</span>
+</div>
+<button class="px-2 py-0.5 rounded bg-tertiary text-on-tertiary font-code-sm text-label-xs font-semibold hover:bg-tertiary-fixed transition-colors">Resolve</button>
+</div>
+</div>
+</div>
+<!-- Environment Shortcuts Section -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-outline tracking-wider uppercase font-semibold">Environment Shortcuts</span>
+<span class="font-code-sm text-code-sm text-outline">4 Mapped</span>
+</div>
+<div class="flex flex-col gap-1.5 font-code-sm text-code-sm">
+<a class="flex items-center justify-between p-2 rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" href="https://github.com/nexus/desktop" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-2">
+<svg class="w-4 h-4 text-on-surface-variant" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+<span class="truncate">github.com/nexus/desktop</span>
+</div>
+<svg class="w-3.5 h-3.5 text-outline" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
+</a>
+<a class="flex items-center justify-between p-2 rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" href="#">
+<div class="flex items-center gap-2">
+<svg class="w-4 h-4 text-secondary" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="M7 7h10"></path><path d="M7 12h10"></path><path d="M7 17h4"></path></svg>
+<span class="truncate">NEXUS-402 (Current Sprint)</span>
+</div>
+<svg class="w-3.5 h-3.5 text-outline" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
+</a>
+<a class="flex items-center justify-between p-2 rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" href="#">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="truncate">staging.nexus.internal</span>
+</div>
+<span class="font-label-xs text-label-xs text-primary">Healthy</span>
+</a>
+<a class="flex items-center justify-between p-2 rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" href="#">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="truncate">app.nexus.dev</span>
+</div>
+<span class="font-label-xs text-label-xs text-on-surface-variant font-mono">v1.3.9</span>
+</a>
+</div>
+<button class="w-full py-2 rounded bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-code-sm text-code-sm flex items-center justify-center gap-1.5 transition-colors">
+<svg class="w-3.5 h-3.5 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg>
+<span>Add Environment Link</span>
+</button>
+</div>
+</section>
+</div>
+</div>
+</div>
+<script>
+  // Dynamic interaction handles for task checkbox toggling
+  document.querySelectorAll('input[type="checkbox"]').forEach(box => {
+    box.addEventListener('change', (e) => {
+      const parentRow = e.target.closest('.group');
+      if (!parentRow) return;
+      const textSpan = parentRow.querySelector('span.text-on-surface, span.text-outline');
+      if (textSpan) {
+        if (e.target.checked) {
+          textSpan.classList.add('line-through', 'text-outline');
+          textSpan.classList.remove('text-on-surface');
+        } else {
+          textSpan.classList.remove('line-through', 'text-outline');
+          textSpan.classList.add('text-on-surface');
+        }
+      }
+    });
+  });
+</script></main></div></body></html>

@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed-dim":"#4edea3","on-error-container":"#ffdad6","tertiary":"#ffb95f","secondary-container":"#00a6e0","on-primary-fixed":"#002113","outline":"#86948a","secondary-fixed-dim":"#7bd0ff","on-surface":"#dfe2eb","secondary-fixed":"#c4e7ff","inverse-surface":"#dfe2eb","on-secondary":"#00354a","tertiary-fixed-dim":"#ffb95f","surface-variant":"#31353c","primary-fixed":"#6ffbbe","on-error":"#690005","secondary":"#7bd0ff","on-tertiary":"#472a00","tertiary-fixed":"#ffddb8","surface-dim":"#10141a","surface":"#10141a","on-tertiary-container":"#523200","inverse-on-surface":"#2d3137","on-secondary-fixed":"#001e2c","on-tertiary-fixed":"#2a1700","inverse-primary":"#006c49","outline-variant":"#3c4a42","on-background":"#dfe2eb","background":"#10141a","surface-tint":"#4edea3","primary":"#4edea3","error-container":"#93000a","on-primary-fixed-variant":"#005236","surface-container-highest":"#31353c","on-secondary-container":"#00374d","on-primary-container":"#00422b","on-primary":"#003824","surface-bright":"#353940","tertiary-container":"#e29100","surface-container-low":"#181c22","on-surface-variant":"#bbcabf","on-tertiary-fixed-variant":"#653e00","primary-container":"#10b981","surface-container-high":"#262a31","surface-container":"#1c2026","surface-container-lowest":"#0a0e14","on-secondary-fixed-variant":"#004c69","error":"#ffb4ab"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"gutter":"1rem","gutter-lg":"1.5rem","margin":"1.5rem","gutter-sm":"0.75rem","margin-mobile":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","space-xl":"1.75rem","space-md":"0.75rem","space-lg":"1.25rem"},fontFamily:{"body-md":["Inter"],"code-lg":["JetBrains Mono"],"code-md":["JetBrains Mono"],"body-lg":["Inter"],"body-sm":["Inter"],"code-sm":["JetBrains Mono"],"headline-md":["Inter"],"headline-lg":["Inter"],"headline-xl-mobile":["Inter"],"label-xs":["JetBrains Mono"],"label-md":["JetBrains Mono"],"headline-xl":["Inter"]},fontSize:{"body-md":["13px",{"lineHeight":"18px","letterSpacing":"-0.005em","fontWeight":"400"}],"code-lg":["13px",{"lineHeight":"18px","letterSpacing":"-0.01em","fontWeight":"500"}],"code-md":["12px",{"lineHeight":"16px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["15px",{"lineHeight":"22px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0em","fontWeight":"400"}],"code-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"400"}],"headline-md":["18px",{"lineHeight":"26px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-xl-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-xs":["10px",{"lineHeight":"12px","letterSpacing":"0.05em","fontWeight":"600"}],"label-md":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"500"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.025em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased select-none"><aside class="fixed left-0 top-0 h-full w-[240px] bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="flex flex-col"><div class="h-14 px-gutter flex items-center justify-between bg-surface-container-low/80 backdrop-blur-md"><div class="flex items-center gap-space-sm"><div class="w-6 h-6 rounded bg-primary/10 flex items-center justify-center"><svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></div><span class="font-headline-md text-headline-md tracking-tight text-on-surface font-bold">Nexus</span></div><span class="font-label-xs text-label-xs px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-medium">v1.4</span></div><nav class="flex flex-col gap-space-xs px-gutter-sm mt-space-md" data-active-classes="bg-surface-container-high text-primary font-medium border-l-2 border-primary shadow-[inset_0_0_12px_rgba(78,222,163,0.06)]"><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="font-body-md text-body-md">Dashboard</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="projects" href="#"><span class="font-body-md text-body-md">Projects</span><span class="font-label-xs text-label-xs px-1.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant">12</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="tasks-and-todos" href="#"><span class="font-body-md text-body-md">Tasks &amp; TODOs</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="port-monitor" href="#"><span class="font-body-md text-body-md">Port Monitor</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#"><span class="font-body-md text-body-md">Settings</span></a></nav></div><div class="p-gutter-sm bg-surface-container-low flex flex-col gap-space-sm"><div class="flex items-center justify-between px-space-sm py-1.5 rounded bg-surface-container-lowest text-on-surface-variant"><div class="flex items-center gap-space-xs truncate"><svg class="w-3.5 h-3.5 text-outline shrink-0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" x2="20" y1="19" y2="19"></line></svg><span class="font-code-sm text-code-sm truncate text-on-surface">~/Dev</span></div><button class="hover:text-primary transition-colors flex items-center justify-center p-0.5 rounded text-outline hover:text-primary" type="button"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path></svg></button></div><div class="flex items-center justify-between px-space-sm py-1"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-xs text-label-xs text-on-surface-variant tracking-wider uppercase">Daemon Online</span></div><span class="font-code-sm text-code-sm text-outline">:8099</span></div></div></aside><div class="pl-[240px]"><header class="fixed top-0 left-[240px] right-0 h-14 bg-surface/85 backdrop-blur-xl z-40 flex items-center justify-between px-gutter shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="flex items-center gap-space-md"><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md font-semibold text-on-surface">Workspace</span><span class="text-outline text-body-sm">/</span><span class="font-headline-md text-headline-md font-semibold text-primary">Tasks &amp; TODOs</span></div></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><svg class="w-4 h-4 absolute left-2.5 text-outline pointer-events-none" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg><input class="w-72 h-8 pl-8 pr-12 rounded bg-surface-container-lowest font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="Search projects, ports, or tasks..." type="text"/><div class="absolute right-2 flex items-center pointer-events-none"><kbd class="font-code-sm text-code-sm px-1 py-0.2 rounded bg-surface-container text-on-surface-variant">⌘K</kbd></div></div><button class="h-8 px-space-sm rounded bg-primary-container text-on-primary-container font-medium font-body-md text-body-md flex items-center gap-space-xs hover:bg-primary hover:text-on-primary transition-colors" type="button"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg><span>Scan Folder</span></button><div class="flex items-center gap-space-xs text-on-surface-variant"><button class="w-8 h-8 rounded flex items-center justify-center hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><svg class="w-4 h-4 text-on-primary" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div></div></div></header><main class="w-full pt-14 px-gutter bg-surface min-h-screen"><div class="flex flex-col w-full pb-10 gap-space-md">
+<!-- Top Summary & Control Banner -->
+<section class="flex flex-col gap-space-xs">
+<!-- Status Metrics & Watcher Rail -->
+<div class="w-full bg-surface-container-low/90 backdrop-blur-md rounded px-gutter py-2.5 flex flex-wrap items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-md text-headline-md font-semibold text-on-surface">14 Pending Tasks</span>
+<span class="font-body-sm text-body-sm text-outline">across 6 projects</span>
+<span class="font-label-xs text-label-xs px-2 py-0.5 rounded-full bg-primary/10 text-primary font-semibold tracking-wide">3 Done Today</span>
+</div>
+<div class="hidden lg:flex items-center gap-space-xs text-outline font-code-sm text-code-sm">
+<span class="text-surface-variant">/</span>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span class="text-on-surface-variant">TODO.md Sync:</span>
+<span class="text-primary font-medium">Just now</span>
+<span class="text-outline-variant font-label-xs">(auto-watch)</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-outline text-label-xs font-code-sm font-normal">~/Dev/*/TODO.md</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm ml-auto">
+<!-- Priority Filter Selector -->
+<div class="relative inline-flex items-center">
+<button class="h-7 px-2.5 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors font-code-sm text-code-sm flex items-center gap-1.5" id="priority-filter-btn" type="button">
+<svg class="w-3.5 h-3.5 text-outline" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+</svg>
+<span id="filter-display-label">Filter: All Priorities</span>
+<svg class="w-3 h-3 text-outline" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+</div>
+<!-- Force Sync Button -->
+<button class="h-7 px-2.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-all font-code-sm text-code-sm flex items-center gap-1.5 active:scale-95" id="force-sync-btn" type="button">
+<svg class="w-3.5 h-3.5 text-primary" fill="none" id="sync-spinner-icon" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+</svg>
+<span>Force Sync</span>
+</button>
+</div>
+</div>
+<!-- Quick Add Input Surface -->
+<div class="w-full bg-surface-container-low rounded p-2 flex flex-col md:flex-row items-center gap-space-sm shadow-sm">
+<div class="flex items-center gap-space-xs flex-1 w-full pl-2">
+<svg class="w-4 h-4 text-primary shrink-0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24">
+<polyline points="4 17 10 11 4 5"></polyline>
+<line x1="12" x2="20" y1="19" y2="19"></line>
+</svg>
+<input class="w-full bg-transparent text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none" id="quick-task-input" placeholder='Add a new task (e.g., "Fix auth bug #auth-daemon !high")...' type="text"/>
+<span class="hidden sm:inline-block font-code-sm text-label-xs text-outline px-1.5 py-0.5 rounded bg-surface-container-lowest shrink-0">Press Enter ↵</span>
+</div>
+<div class="flex items-center gap-space-xs w-full md:w-auto justify-end overflow-x-auto">
+<!-- Project Dropdown Pill -->
+<div class="relative">
+<select class="appearance-none h-7 pl-2.5 pr-6 rounded bg-surface-container text-on-surface-variant font-code-sm text-code-sm hover:bg-surface-container-high transition-colors focus:outline-none cursor-pointer" id="quick-project-select">
+<option value="nexus-desktop">nexus-desktop</option>
+<option value="flow-gateway">flow-gateway</option>
+<option value="auth-daemon">auth-daemon</option>
+<option value="cloud-analytics">cloud-analytics</option>
+</select>
+<svg class="w-3 h-3 text-outline absolute right-2 top-2 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg>
+</div>
+<!-- Priority Pill Selector -->
+<div class="relative">
+<select class="appearance-none h-7 pl-2.5 pr-6 rounded bg-tertiary-container/20 text-tertiary font-code-sm text-code-sm font-medium hover:bg-tertiary-container/30 transition-colors focus:outline-none cursor-pointer" id="quick-priority-select">
+<option value="HIGH">! HIGH</option>
+<option value="URGENT">! URGENT</option>
+<option value="NORMAL">~ NORMAL</option>
+<option value="LOW">· LOW</option>
+</select>
+<svg class="w-3 h-3 text-tertiary absolute right-2 top-2 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg>
+</div>
+<!-- Quick Tags -->
+<button class="h-7 px-2 rounded bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors font-code-sm text-code-sm flex items-center gap-1" type="button">
+<span class="text-outline">#</span><span>tag</span>
+</button>
+<button class="h-7 px-2 rounded bg-surface-container text-secondary hover:text-on-surface hover:bg-surface-container-high transition-colors font-code-sm text-code-sm flex items-center gap-1" type="button">
+<span class="text-secondary/70">@</span><span>today</span>
+</button>
+<!-- Add CTA -->
+<button class="h-7 px-3 rounded bg-primary text-on-primary hover:bg-primary-container font-headline-md text-code-sm font-semibold transition-colors flex items-center gap-1 shrink-0 shadow-sm active:scale-95" id="add-task-cta" type="button">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><line x1="5" x2="19" y1="12" y2="12"></line></svg>
+<span>Add Task</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Main Asymmetric Workspace Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- LEFT COLUMN: Repositories & Grouped Task Manifests (65% -> col-span-8) -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<!-- Column Subhead & Expand Toggle -->
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-md text-headline-md font-semibold text-on-surface">Repositories &amp; Task Manifests</span>
+<span class="font-code-sm text-code-sm px-1.5 py-0.2 rounded bg-surface-container-highest text-on-surface-variant">3 Manifests</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="font-code-sm text-code-sm text-outline hover:text-on-surface transition-colors flex items-center gap-1" id="toggle-all-groups" type="button">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="m7 15 5 5 5-5M7 9l5-5 5 5"></path></svg>
+<span>Toggle All</span>
+</button>
+</div>
+</div>
+<!-- PROJECT GROUP 1: nexus-desktop -->
+<div class="project-group rounded bg-surface-container-low shadow-sm overflow-hidden flex flex-col" data-project="nexus-desktop">
+<!-- Group Header Card -->
+<div class="project-header flex items-center justify-between px-gutter py-2.5 bg-surface-container cursor-pointer select-none hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<svg class="project-chevron w-4 h-4 text-outline transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+<div class="w-6 h-6 rounded bg-primary/10 flex items-center justify-center shrink-0">
+<svg class="w-3.5 h-3.5 text-primary" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+</svg>
+</div>
+<span class="font-code-lg text-code-lg font-semibold text-on-surface truncate">nexus-desktop</span>
+<div class="hidden sm:flex items-center gap-1">
+<span class="font-code-sm text-label-xs px-1.5 py-0.2 rounded bg-surface-container-highest text-on-surface-variant">Rust</span>
+<span class="font-code-sm text-label-xs px-1.5 py-0.2 rounded bg-surface-container-highest text-on-surface-variant">Tauri</span>
+</div>
+<span class="font-code-sm text-code-sm px-1.5 py-0.2 rounded bg-surface-container-lowest text-secondary flex items-center gap-1">
+<svg class="w-3 h-3 text-secondary" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><line x1="6" x2="6" y1="3" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg>
+<span>main</span>
+</span>
+</div>
+<div class="flex items-center gap-space-md shrink-0">
+<span class="font-body-sm text-body-sm text-outline"><strong class="text-on-surface font-medium">3</strong> pending <span class="text-surface-variant">•</span> 2 done</span>
+<div class="hidden md:flex items-center gap-1.5 font-code-sm text-code-sm text-outline-variant bg-surface-container-lowest px-2 py-0.5 rounded">
+<svg class="w-3 h-3 text-outline" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+<span class="text-on-surface-variant font-medium">TODO.md</span>
+</div>
+<button class="p-1 rounded hover:bg-surface-container text-outline hover:text-primary transition-colors" title="Open in VS Code">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
+</button>
+</div>
+</div>
+<!-- Task List Items -->
+<div class="project-content flex flex-col">
+<!-- Task 1 -->
+<div class="task-row flex items-center justify-between px-gutter py-2 hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-space-sm min-w-0">
+<button class="task-checkbox w-4 h-4 rounded-sm bg-surface-container-lowest hover:bg-surface-container-high transition-colors flex items-center justify-center shrink-0" data-checked="false" type="button">
+<svg class="check-icon w-3 h-3 text-on-primary hidden" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+</button>
+<span class="font-code-sm text-label-xs px-1.5 py-0.2 rounded bg-tertiary/10 text-tertiary font-semibold shrink-0">HIGH</span>
+<span class="font-body-md text-body-md text-on-surface font-medium truncate task-title">Implement Tauri port scanner background thread</span>
+<span class="font-code-sm text-label-xs px-1 rounded bg-surface-container-highest text-on-surface-variant shrink-0">[Core]</span>
+<span class="font-code-sm text-code-sm text-outline shrink-0">#ipc</span>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<span class="font-code-sm text-code-sm text-secondary bg-secondary/10 px-1.5 py-0.2 rounded">Today</span>
+<div class="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Jump to Workspace">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+</button>
+<button class="p-1 rounded text-outline hover:text-error hover:bg-surface-container-high transition-colors" title="Delete task">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Task 2 -->
+<div class="task-row flex items-center justify-between px-gutter py-2 hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-space-sm min-w-0">
+<button class="task-checkbox w-4 h-4 rounded-sm bg-surface-container-lowest hover:bg-surface-container-high transition-colors flex items-center justify-center shrink-0" data-checked="false" type="button">
+<svg class="check-icon w-3 h-3 text-on-primary hidden" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+</button>
+<span class="font-code-sm text-label-xs px-1.5 py-0.2 rounded bg-surface-container-highest text-on-surface-variant font-semibold shrink-0">NORMAL</span>
+<span class="font-body-md text-body-md text-on-surface truncate task-title">Add process memory footprint widget to sidebar</span>
+<span class="font-code-sm text-label-xs px-1 rounded bg-surface-container-highest text-on-surface-variant shrink-0">[UI]</span>
+<span class="font-code-sm text-code-sm text-outline shrink-0">#metrics</span>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<span class="font-code-sm text-code-sm text-outline">Tomorrow</span>
+<div class="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Jump to Workspace">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+</button>
+<button class="p-1 rounded text-outline hover:text-error hover:bg-surface-container-high transition-colors" title="Delete task">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Task 3 -->
+<div class="task-row flex items-center justify-between px-gutter py-2 hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-space-sm min-w-0">
+<button class="task-checkbox w-4 h-4 rounded-sm bg-surface-container-lowest hover:bg-surface-container-high transition-colors flex items-center justify-center shrink-0" data-checked="false" type="button">
+<svg class="check-icon w-3 h-3 text-on-primary hidden" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+</button>
+<span class="font-code-sm text-label-xs px-1.5 py-0.2 rounded bg-surface-container-highest text-on-surface-variant font-semibold shrink-0">NORMAL</span>
+<span class="font-body-md text-body-md text-on-surface truncate task-title">Run SQLite migration for workspace config cache</span>
+<span class="font-code-sm text-label-xs px-1 rounded bg-surface-container-highest text-on-surface-variant shrink-0">[DB]</span>
+<span class="font-code-sm text-code-sm text-outline shrink-0">#storage</span>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<span class="font-code-sm text-code-sm text-outline">In 2 days</span>
+<div class="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Jump to Workspace">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+</button>
+<button class="p-1 rounded text-outline hover:text-error hover:bg-surface-container-high transition-colors" title="Delete task">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Task 4 (Completed) -->
+<div class="task-row flex items-center justify-between px-gutter py-2 bg-surface-container-low/50 hover:bg-surface-container transition-colors group opacity-60">
+<div class="flex items-center gap-space-sm min-w-0">
+<button class="task-checkbox w-4 h-4 rounded-sm bg-primary flex items-center justify-center shrink-0" data-checked="true" type="button">
+<svg class="check-icon w-3 h-3 text-on-primary" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+</button>
+<span class="font-body-md text-body-md text-outline line-through truncate task-title">Configure multi-platform cross-compilation pipeline</span>
+<span class="font-code-sm text-label-xs px-1 rounded bg-surface-container-highest text-outline shrink-0">[Build]</span>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<span class="font-code-sm text-code-sm text-outline">2h ago</span>
+<div class="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1 rounded text-outline hover:text-error hover:bg-surface-container-high transition-colors" title="Delete task">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Task 5 (Completed) -->
+<div class="task-row flex items-center justify-between px-gutter py-2 bg-surface-container-low/50 hover:bg-surface-container transition-colors group opacity-60">
+<div class="flex items-center gap-space-sm min-w-0">
+<button class="task-checkbox w-4 h-4 rounded-sm bg-primary flex items-center justify-center shrink-0" data-checked="true" type="button">
+<svg class="check-icon w-3 h-3 text-on-primary" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+</button>
+<span class="font-body-md text-body-md text-outline line-through truncate task-title">Hook window focus listener to global shortcut ⌘+Space</span>
+<span class="font-code-sm text-label-xs px-1 rounded bg-surface-container-highest text-outline shrink-0">[IPC]</span>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<span class="font-code-sm text-code-sm text-outline">Yesterday</span>
+<div class="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1 rounded text-outline hover:text-error hover:bg-surface-container-high transition-colors" title="Delete task">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- PROJECT GROUP 2: flow-gateway -->
+<div class="project-group rounded bg-surface-container-low shadow-sm overflow-hidden flex flex-col" data-project="flow-gateway">
+<!-- Group Header Card -->
+<div class="project-header flex items-center justify-between px-gutter py-2.5 bg-surface-container cursor-pointer select-none hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<svg class="project-chevron w-4 h-4 text-outline transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+<div class="w-6 h-6 rounded bg-secondary-container/10 flex items-center justify-center shrink-0">
+<svg class="w-3.5 h-3.5 text-secondary" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+</svg>
+</div>
+<span class="font-code-lg text-code-lg font-semibold text-on-surface truncate">flow-gateway</span>
+<div class="hidden sm:flex items-center gap-1">
+<span class="font-code-sm text-label-xs px-1.5 py-0.2 rounded bg-surface-container-highest text-on-surface-variant">Go</span>
+<span class="font-code-sm text-label-xs px-1.5 py-0.2 rounded bg-surface-container-highest text-on-surface-variant">gRPC</span>
+</div>
+<span class="font-code-sm text-code-sm px-1.5 py-0.2 rounded bg-surface-container-lowest text-secondary flex items-center gap-1">
+<svg class="w-3 h-3 text-secondary" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><line x1="6" x2="6" y1="3" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg>
+<span>feat/routing</span>
+</span>
+</div>
+<div class="flex items-center gap-space-md shrink-0">
+<span class="font-body-sm text-body-sm text-outline"><strong class="text-on-surface font-medium">3</strong> pending</span>
+<div class="hidden md:flex items-center gap-1.5 font-code-sm text-code-sm text-outline-variant bg-surface-container-lowest px-2 py-0.5 rounded">
+<svg class="w-3 h-3 text-outline" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+<span class="text-on-surface-variant font-medium">TODO.md</span>
+</div>
+<button class="p-1 rounded hover:bg-surface-container text-outline hover:text-primary transition-colors" title="Open in VS Code">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
+</button>
+</div>
+</div>
+<!-- Task List Items -->
+<div class="project-content flex flex-col">
+<!-- Urgent CORS Task -->
+<div class="task-row flex items-center justify-between px-gutter py-2 hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-space-sm min-w-0">
+<button class="task-checkbox w-4 h-4 rounded-sm bg-surface-container-lowest hover:bg-surface-container-high transition-colors flex items-center justify-center shrink-0" data-checked="false" type="button">
+<svg class="check-icon w-3 h-3 text-on-primary hidden" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+</button>
+<span class="font-code-sm text-label-xs px-1.5 py-0.2 rounded bg-error-container text-error font-semibold shrink-0">URGENT</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold truncate task-title">Fix CORS header on daemon :8080 proxy handler</span>
+<span class="font-code-sm text-label-xs px-1 rounded bg-surface-container-highest text-on-surface-variant shrink-0">[Proxy]</span>
+<span class="font-code-sm text-label-xs px-1.5 py-0.2 rounded bg-secondary/10 text-secondary shrink-0">:8080</span>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<span class="font-code-sm text-code-sm text-error bg-error-container/30 px-1.5 py-0.2 rounded">Immediate</span>
+<div class="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Jump to Workspace">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+</button>
+<button class="p-1 rounded text-outline hover:text-error hover:bg-surface-container-high transition-colors" title="Delete task">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Perf Task -->
+<div class="task-row flex items-center justify-between px-gutter py-2 hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-space-sm min-w-0">
+<button class="task-checkbox w-4 h-4 rounded-sm bg-surface-container-lowest hover:bg-surface-container-high transition-colors flex items-center justify-center shrink-0" data-checked="false" type="button">
+<svg class="check-icon w-3 h-3 text-on-primary hidden" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+</button>
+<span class="font-code-sm text-label-xs px-1.5 py-0.2 rounded bg-tertiary/10 text-tertiary font-semibold shrink-0">HIGH</span>
+<span class="font-body-md text-body-md text-on-surface truncate task-title">Benchmark gRPC stream throughput on 10k concurrent connections</span>
+<span class="font-code-sm text-label-xs px-1 rounded bg-surface-container-highest text-on-surface-variant shrink-0">[Perf]</span>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<span class="font-code-sm text-code-sm text-outline">Next Week</span>
+<div class="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Jump to Workspace">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+</button>
+<button class="p-1 rounded text-outline hover:text-error hover:bg-surface-container-high transition-colors" title="Delete task">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Schema Task -->
+<div class="task-row flex items-center justify-between px-gutter py-2 hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-space-sm min-w-0">
+<button class="task-checkbox w-4 h-4 rounded-sm bg-surface-container-lowest hover:bg-surface-container-high transition-colors flex items-center justify-center shrink-0" data-checked="false" type="button">
+<svg class="check-icon w-3 h-3 text-on-primary hidden" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+</button>
+<span class="font-code-sm text-label-xs px-1.5 py-0.2 rounded bg-surface-container-highest text-on-surface-variant font-semibold shrink-0">NORMAL</span>
+<span class="font-body-md text-body-md text-on-surface truncate task-title">Update Proto buf schemas to v2.4</span>
+<span class="font-code-sm text-label-xs px-1 rounded bg-surface-container-highest text-on-surface-variant shrink-0">[API]</span>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<span class="font-code-sm text-code-sm text-outline">Backlog</span>
+<div class="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Jump to Workspace">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+</button>
+<button class="p-1 rounded text-outline hover:text-error hover:bg-surface-container-high transition-colors" title="Delete task">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- PROJECT GROUP 3: auth-daemon -->
+<div class="project-group rounded bg-surface-container-low shadow-sm overflow-hidden flex flex-col" data-project="auth-daemon">
+<!-- Group Header Card -->
+<div class="project-header flex items-center justify-between px-gutter py-2.5 bg-surface-container cursor-pointer select-none hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<svg class="project-chevron w-4 h-4 text-outline transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+<div class="w-6 h-6 rounded bg-tertiary-container/10 flex items-center justify-center shrink-0">
+<svg class="w-3.5 h-3.5 text-tertiary" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+</svg>
+</div>
+<span class="font-code-lg text-code-lg font-semibold text-on-surface truncate">auth-daemon</span>
+<div class="hidden sm:flex items-center gap-1">
+<span class="font-code-sm text-label-xs px-1.5 py-0.2 rounded bg-surface-container-highest text-on-surface-variant">Node</span>
+<span class="font-code-sm text-label-xs px-1.5 py-0.2 rounded bg-surface-container-highest text-on-surface-variant">Postgres</span>
+</div>
+<span class="font-code-sm text-label-xs px-1.5 py-0.2 rounded bg-tertiary-container/20 text-tertiary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+<span>Port Conflict :5432</span>
+</span>
+</div>
+<div class="flex items-center gap-space-md shrink-0">
+<span class="font-body-sm text-body-sm text-outline"><strong class="text-on-surface font-medium">2</strong> pending</span>
+<div class="hidden md:flex items-center gap-1.5 font-code-sm text-code-sm text-outline-variant bg-surface-container-lowest px-2 py-0.5 rounded">
+<svg class="w-3 h-3 text-outline" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+<span class="text-on-surface-variant font-medium">TODO.md</span>
+</div>
+<button class="p-1 rounded hover:bg-surface-container text-outline hover:text-primary transition-colors" title="Open in VS Code">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
+</button>
+</div>
+</div>
+<!-- Task List Items -->
+<div class="project-content flex flex-col">
+<!-- Conflict Task -->
+<div class="task-row flex items-center justify-between px-gutter py-2 hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-space-sm min-w-0">
+<button class="task-checkbox w-4 h-4 rounded-sm bg-surface-container-lowest hover:bg-surface-container-high transition-colors flex items-center justify-center shrink-0" data-checked="false" type="button">
+<svg class="check-icon w-3 h-3 text-on-primary hidden" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+</button>
+<span class="font-code-sm text-label-xs px-1.5 py-0.2 rounded bg-error-container text-error font-semibold shrink-0">URGENT</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold truncate task-title">Resolve port 5432 container collision with local Postgres</span>
+<span class="font-code-sm text-label-xs px-1 rounded bg-surface-container-highest text-on-surface-variant shrink-0">[Docker]</span>
+<span class="font-code-sm text-label-xs px-1.5 py-0.2 rounded bg-tertiary/10 text-tertiary shrink-0">:5432</span>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<span class="font-code-sm text-code-sm text-tertiary bg-tertiary/10 px-1.5 py-0.2 rounded">Collision</span>
+<div class="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Jump to Workspace">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+</button>
+<button class="p-1 rounded text-outline hover:text-error hover:bg-surface-container-high transition-colors" title="Delete task">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Secret Tokens Task -->
+<div class="task-row flex items-center justify-between px-gutter py-2 hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-space-sm min-w-0">
+<button class="task-checkbox w-4 h-4 rounded-sm bg-surface-container-lowest hover:bg-surface-container-high transition-colors flex items-center justify-center shrink-0" data-checked="false" type="button">
+<svg class="check-icon w-3 h-3 text-on-primary hidden" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+</button>
+<span class="font-code-sm text-label-xs px-1.5 py-0.2 rounded bg-surface-container-highest text-on-surface-variant font-semibold shrink-0">NORMAL</span>
+<span class="font-body-md text-body-md text-on-surface truncate task-title">Rotate OAuth2 refresh secret tokens in staging .env</span>
+<span class="font-code-sm text-label-xs px-1 rounded bg-surface-container-highest text-on-surface-variant shrink-0">[Security]</span>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<span class="font-code-sm text-code-sm text-outline">Tomorrow</span>
+<div class="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Jump to Workspace">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+</button>
+<button class="p-1 rounded text-outline hover:text-error hover:bg-surface-container-high transition-colors" title="Delete task">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Focus Rail & Live Disk Preview (35% -> col-span-4) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Today's Focus Card -->
+<div class="rounded bg-surface-container-low shadow-sm flex flex-col overflow-hidden">
+<!-- Card Header -->
+<div class="px-gutter py-2.5 bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<svg class="w-4 h-4 text-tertiary" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+</svg>
+<span class="font-headline-md text-code-lg font-semibold text-on-surface">Today's Focus</span>
+<span class="font-label-xs text-label-xs px-1.5 py-0.2 rounded-full bg-surface-container-highest text-on-surface-variant">4 items</span>
+</div>
+<span class="font-code-sm text-label-xs text-outline">Drag to reorder</span>
+</div>
+<!-- Pinned Task Cards List -->
+<div class="p-gutter-sm flex flex-col gap-space-xs" id="focus-task-container">
+<!-- Focus Item 1 -->
+<div class="focus-item rounded bg-surface-container p-2.5 flex items-start gap-space-sm hover:bg-surface-container-high transition-all cursor-grab active:cursor-grabbing group shadow-sm">
+<svg class="w-3.5 h-3.5 text-outline mt-1 shrink-0 opacity-40 group-hover:opacity-100" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="9" cy="5" r="1"></circle><circle cx="9" cy="12" r="1"></circle><circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle><circle cx="15" cy="12" r="1"></circle><circle cx="15" cy="19" r="1"></circle>
+</svg>
+<div class="flex flex-col flex-1 min-w-0 gap-1">
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-label-xs text-primary font-medium tracking-tight">nexus-desktop</span>
+<span class="font-code-sm text-label-xs px-1 rounded bg-tertiary/10 text-tertiary font-semibold">HIGH</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-medium leading-tight">Implement Tauri port scanner background thread</p>
+<div class="flex items-center justify-between mt-1 text-outline font-code-sm text-label-xs">
+<span class="flex items-center gap-1 text-secondary">
+<svg class="w-3 h-3 text-secondary" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+<span>Due 5:00 PM</span>
+</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity text-outline-variant">#ipc</span>
+</div>
+</div>
+</div>
+<!-- Focus Item 2 (URGENT) -->
+<div class="focus-item rounded bg-surface-container p-2.5 flex items-start gap-space-sm hover:bg-surface-container-high transition-all cursor-grab active:cursor-grabbing group shadow-sm bg-gradient-to-r from-error-container/20 to-transparent">
+<svg class="w-3.5 h-3.5 text-outline mt-1 shrink-0 opacity-40 group-hover:opacity-100" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="9" cy="5" r="1"></circle><circle cx="9" cy="12" r="1"></circle><circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle><circle cx="15" cy="12" r="1"></circle><circle cx="15" cy="19" r="1"></circle>
+</svg>
+<div class="flex flex-col flex-1 min-w-0 gap-1">
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-label-xs text-secondary font-medium tracking-tight">flow-gateway</span>
+<span class="font-code-sm text-label-xs px-1 rounded bg-error-container text-error font-semibold">URGENT</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-medium leading-tight">Fix CORS header on daemon :8080 proxy handler</p>
+<div class="flex items-center justify-between mt-1 text-outline font-code-sm text-label-xs">
+<span class="flex items-center gap-1 text-error">
+<svg class="w-3 h-3 text-error" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" x2="12" y1="9" y2="13"></line><line x1="12" x2="12.01" y1="17" y2="17"></line></svg>
+<span>Blocker</span>
+</span>
+<span class="font-code-sm text-label-xs px-1 rounded bg-surface-container-highest text-on-surface-variant">:8080</span>
+</div>
+</div>
+</div>
+<!-- Focus Item 3 (URGENT) -->
+<div class="focus-item rounded bg-surface-container p-2.5 flex items-start gap-space-sm hover:bg-surface-container-high transition-all cursor-grab active:cursor-grabbing group shadow-sm bg-gradient-to-r from-error-container/20 to-transparent">
+<svg class="w-3.5 h-3.5 text-outline mt-1 shrink-0 opacity-40 group-hover:opacity-100" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="9" cy="5" r="1"></circle><circle cx="9" cy="12" r="1"></circle><circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle><circle cx="15" cy="12" r="1"></circle><circle cx="15" cy="19" r="1"></circle>
+</svg>
+<div class="flex flex-col flex-1 min-w-0 gap-1">
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-label-xs text-tertiary font-medium tracking-tight">auth-daemon</span>
+<span class="font-code-sm text-label-xs px-1 rounded bg-error-container text-error font-semibold">URGENT</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-medium leading-tight">Resolve port 5432 container collision</p>
+<div class="flex items-center justify-between mt-1 text-outline font-code-sm text-label-xs">
+<span class="flex items-center gap-1 text-tertiary">
+<svg class="w-3 h-3 text-tertiary" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+<span>Port Conflict</span>
+</span>
+<span class="font-code-sm text-label-xs px-1 rounded bg-surface-container-highest text-on-surface-variant">:5432</span>
+</div>
+</div>
+</div>
+<!-- Focus Item 4 -->
+<div class="focus-item rounded bg-surface-container p-2.5 flex items-start gap-space-sm hover:bg-surface-container-high transition-all cursor-grab active:cursor-grabbing group shadow-sm">
+<svg class="w-3.5 h-3.5 text-outline mt-1 shrink-0 opacity-40 group-hover:opacity-100" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="9" cy="5" r="1"></circle><circle cx="9" cy="12" r="1"></circle><circle cx="9" cy="19" r="1"></circle>
+<circle cx="15" cy="5" r="1"></circle><circle cx="15" cy="12" r="1"></circle><circle cx="15" cy="19" r="1"></circle>
+</svg>
+<div class="flex flex-col flex-1 min-w-0 gap-1">
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-label-xs text-primary font-medium tracking-tight">nexus-desktop</span>
+<span class="font-code-sm text-label-xs px-1 rounded bg-surface-container-highest text-on-surface-variant font-semibold">NORMAL</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-medium leading-tight">Add process memory footprint widget to sidebar</p>
+<div class="flex items-center justify-between mt-1 text-outline font-code-sm text-label-xs">
+<span class="text-outline">Low friction</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity text-outline-variant">#metrics</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Focus Progress Footer -->
+<div class="px-gutter py-2.5 bg-surface-container flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Daily Velocity</span>
+<span class="font-code-sm text-code-sm font-semibold text-primary">2 of 6 completed (33%)</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-lowest overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500" style="width: 33.3%;"></div>
+</div>
+</div>
+</div>
+<!-- Live TODO.md Disk Preview Card -->
+<div class="rounded bg-surface-container-low shadow-sm flex flex-col overflow-hidden">
+<!-- Live Sync Header -->
+<div class="px-gutter py-2.5 bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<svg class="w-4 h-4 text-primary shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+<polyline points="10 9 9 9 8 9"></polyline>
+</svg>
+<span class="font-headline-md text-code-lg font-semibold text-on-surface truncate">Live TODO.md Disk</span>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<div class="flex items-center gap-1 font-label-xs text-label-xs px-1.5 py-0.5 rounded bg-surface-container-lowest text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+<span>Watcher ON</span>
+</div>
+<button class="h-6 px-2 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface text-label-xs font-code-sm flex items-center gap-1 transition-colors" title="Open in VS Code">
+<svg class="w-3 h-3 text-secondary" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
+<span>Code</span>
+</button>
+</div>
+</div>
+<!-- Target Selector Subheader -->
+<div class="px-gutter py-1.5 bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-1.5 font-code-sm text-code-sm text-outline truncate">
+<svg class="w-3.5 h-3.5 text-outline shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+<span class="text-on-surface font-medium truncate">nexus-desktop/TODO.md</span>
+</div>
+<span class="font-code-sm text-label-xs text-outline px-1 rounded bg-surface-container">markdown</span>
+</div>
+<!-- Syntax-highlighted Markdown Terminal Box -->
+<div class="bg-surface-container-lowest p-3 font-code-sm text-code-sm leading-relaxed overflow-x-auto select-text">
+<div class="flex flex-col gap-0.5 text-on-surface">
+<div class="text-primary font-semibold"># nexus-desktop Tasks</div>
+<div class="h-2"></div>
+<div class="text-secondary font-medium">## In Progress</div>
+<div class="flex items-start gap-1">
+<span class="text-outline shrink-0">- [ ]</span>
+<span class="text-on-surface"><span class="text-tertiary font-semibold">[Core]</span> Implement Tauri port scanner background thread <span class="text-tertiary">!high</span> <span class="text-secondary">@today</span></span>
+</div>
+<div class="flex items-start gap-1">
+<span class="text-outline shrink-0">- [ ]</span>
+<span class="text-on-surface"><span class="text-outline-variant">[UI]</span> Add process memory footprint widget to sidebar <span class="text-secondary">@tomorrow</span></span>
+</div>
+<div class="flex items-start gap-1">
+<span class="text-outline shrink-0">- [ ]</span>
+<span class="text-on-surface"><span class="text-outline-variant">[DB]</span> Run SQLite migration for workspace config cache</span>
+</div>
+<div class="h-2"></div>
+<div class="text-secondary font-medium">## Completed</div>
+<div class="flex items-start gap-1 opacity-50">
+<span class="text-primary shrink-0">- [x]</span>
+<span class="line-through text-outline"><span class="text-outline">[Build]</span> Configure multi-platform cross-compilation pipeline <span class="text-outline-variant font-label-xs">(done 2h ago)</span></span>
+</div>
+<div class="flex items-start gap-1 opacity-50">
+<span class="text-primary shrink-0">- [x]</span>
+<span class="line-through text-outline"><span class="text-outline">[IPC]</span> Hook window focus listener to global shortcut ⌘+Space</span>
+</div>
+</div>
+</div>
+<!-- Editor Telemetry Footer Bar -->
+<div class="px-gutter py-1.5 bg-surface-container flex items-center justify-between font-code-sm text-label-xs text-outline">
+<div class="flex items-center gap-space-sm">
+<span>Ln 12, Col 1</span>
+<span>UTF-8</span>
+<span>LF</span>
+</div>
+<div class="flex items-center gap-1.5 text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>2 uncommitted changes in git</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive UI Micro-Scripts -->
+<script>
+  (function initNexusTasks() {
+    // 1. Interactive Checkbox Handlers
+    const checkboxes = document.querySelectorAll('.task-checkbox');
+    checkboxes.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isChecked = btn.getAttribute('data-checked') === 'true';
+        const row = btn.closest('.task-row');
+        const title = row ? row.querySelector('.task-title') : null;
+        const icon = btn.querySelector('.check-icon');
+
+        if (!isChecked) {
+          btn.setAttribute('data-checked', 'true');
+          btn.classList.add('bg-primary');
+          btn.classList.remove('bg-surface-container-lowest');
+          if (icon) icon.classList.remove('hidden');
+          if (row) {
+            row.classList.add('opacity-60', 'bg-surface-container-low/50');
+            if (title) title.classList.add('line-through', 'text-outline');
+          }
+        } else {
+          btn.setAttribute('data-checked', 'false');
+          btn.classList.remove('bg-primary');
+          btn.classList.add('bg-surface-container-lowest');
+          if (icon) icon.classList.add('hidden');
+          if (row) {
+            row.classList.remove('opacity-60', 'bg-surface-container-low/50');
+            if (title) title.classList.remove('line-through', 'text-outline');
+          }
+        }
+      });
+    });
+
+    // 2. Expand/Collapse Project Groups
+    const groupHeaders = document.querySelectorAll('.project-header');
+    groupHeaders.forEach(hdr => {
+      hdr.addEventListener('click', () => {
+        const group = hdr.closest('.project-group');
+        const content = group.querySelector('.project-content');
+        const chevron = group.querySelector('.project-chevron');
+
+        if (content.style.display === 'none') {
+          content.style.display = 'flex';
+          chevron.style.transform = 'rotate(0deg)';
+        } else {
+          content.style.display = 'none';
+          chevron.style.transform = 'rotate(-90deg)';
+        }
+      });
+    });
+
+    // 3. Global Toggle All
+    const toggleAllBtn = document.getElementById('toggle-all-groups');
+    let allExpanded = true;
+    if (toggleAllBtn) {
+      toggleAllBtn.addEventListener('click', () => {
+        allExpanded = !allExpanded;
+        document.querySelectorAll('.project-group').forEach(group => {
+          const content = group.querySelector('.project-content');
+          const chevron = group.querySelector('.project-chevron');
+          if (allExpanded) {
+            content.style.display = 'flex';
+            chevron.style.transform = 'rotate(0deg)';
+          } else {
+            content.style.display = 'none';
+            chevron.style.transform = 'rotate(-90deg)';
+          }
+        });
+      });
+    }
+
+    // 4. Force Sync Animation
+    const forceSyncBtn = document.getElementById('force-sync-btn');
+    const syncSpinner = document.getElementById('sync-spinner-icon');
+    if (forceSyncBtn && syncSpinner) {
+      forceSyncBtn.addEventListener('click', () => {
+        syncSpinner.classList.add('animate-spin');
+        setTimeout(() => {
+          syncSpinner.classList.remove('animate-spin');
+        }, 850);
+      });
+    }
+
+    // 5. Quick Add Task Action
+    const input = document.getElementById('quick-task-input');
+    const addBtn = document.getElementById('add-task-cta');
+    const handleAddTask = () => {
+      const val = input.value.trim();
+      if (!val) return;
+      const firstGroup = document.querySelector('.project-group .project-content');
+      if (firstGroup) {
+        const newRow = document.createElement('div');
+        newRow.className = 'task-row flex items-center justify-between px-gutter py-2 hover:bg-surface-container transition-colors group animate-fadeIn';
+        newRow.innerHTML = `
+          <div class="flex items-center gap-space-sm min-w-0">
+            <button type="button" class="task-checkbox w-4 h-4 rounded-sm bg-surface-container-lowest hover:bg-surface-container-high transition-colors flex items-center justify-center shrink-0" data-checked="false">
+              <svg class="check-icon w-3 h-3 text-on-primary hidden" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </button>
+            <span class="font-code-sm text-label-xs px-1.5 py-0.2 rounded bg-tertiary/10 text-tertiary font-semibold shrink-0">HIGH</span>
+            <span class="font-body-md text-body-md text-on-surface font-medium truncate task-title">${val}</span>
+            <span class="font-code-sm text-label-xs px-1 rounded bg-surface-container-highest text-on-surface-variant shrink-0">[Custom]</span>
+          </div>
+          <div class="flex items-center gap-space-sm shrink-0">
+            <span class="font-code-sm text-code-sm text-secondary bg-secondary/10 px-1.5 py-0.2 rounded">Today</span>
+            <div class="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+              <button class="p-1 rounded text-outline hover:text-error hover:bg-surface-container-high transition-colors" onclick="this.closest('.task-row').remove()">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+              </button>
+            </div>
+          </div>
+        `;
+        firstGroup.prepend(newRow);
+        input.value = '';
+
+        // Attach event listener to new checkbox
+        const newCb = newRow.querySelector('.task-checkbox');
+        newCb.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isChecked = newCb.getAttribute('data-checked') === 'true';
+          const title = newRow.querySelector('.task-title');
+          const icon = newCb.querySelector('.check-icon');
+          if (!isChecked) {
+            newCb.setAttribute('data-checked', 'true');
+            newCb.classList.add('bg-primary');
+            newCb.classList.remove('bg-surface-container-lowest');
+            if (icon) icon.classList.remove('hidden');
+            newRow.classList.add('opacity-60', 'bg-surface-container-low/50');
+            if (title) title.classList.add('line-through', 'text-outline');
+          } else {
+            newCb.setAttribute('data-checked', 'false');
+            newCb.classList.remove('bg-primary');
+            newCb.classList.add('bg-surface-container-lowest');
+            if (icon) icon.classList.add('hidden');
+            newRow.classList.remove('opacity-60', 'bg-surface-container-low/50');
+            if (title) title.classList.remove('line-through', 'text-outline');
+          }
+        });
+      }
+    };
+
+    if (addBtn && input) {
+      addBtn.addEventListener('click', handleAddTask);
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') handleAddTask();
+      });
+    }
+  })();
+</script></main></div></body></html>
