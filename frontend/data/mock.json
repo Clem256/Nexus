@@ -1,0 +1,818 @@
+{
+  "workspace": {
+    "root": "~/Dev",
+    "version": "v1.4",
+    "daemon": {
+      "online": true,
+      "port": 8099
+    },
+    "watcher": "inotify",
+    "reposAddedThisMonth": 2,
+    "telemetry": {
+      "socketBufferKb": 4096,
+      "latencyMs": 0.12,
+      "droppedPackets": 0,
+      "tap": "eBPF network tap active",
+      "platform": "macOS kernel"
+    },
+    "appVersion": "v1.4.0",
+    "dbPath": "~/Library/Application Support/nexus/db.sqlite"
+  },
+  "projects": [
+    {
+      "id": "nexus-desktop",
+      "name": "nexus-desktop",
+      "path": "~/Dev/nexus-desktop",
+      "icon": "monitor",
+      "accent": "primary",
+      "version": "v1.4.0",
+      "categories": [
+        "rust",
+        "web"
+      ],
+      "status": "online",
+      "port": 1420,
+      "stack": [
+        {
+          "label": "Rust",
+          "tone": "primary"
+        },
+        {
+          "label": "Desktop Core",
+          "tone": "neutral"
+        },
+        {
+          "label": "UI",
+          "tone": "secondary"
+        },
+        {
+          "label": "TypeScript",
+          "tone": "neutral"
+        }
+      ],
+      "dashboardTags": [
+        {
+          "label": "Rust",
+          "tone": "secondary"
+        },
+        {
+          "label": "Tauri",
+          "tone": "primary"
+        },
+        {
+          "label": "v1.4.0",
+          "tone": "neutral"
+        }
+      ],
+      "git": {
+        "branch": "main",
+        "state": "modified",
+        "modified": 2
+      },
+      "row2": {
+        "left": {
+          "label": "github.com/nexus/app",
+          "icon": "link",
+          "href": "https://github.com/nexus/app"
+        },
+        "right": {
+          "label": "Docs v1.4",
+          "icon": "doc"
+        }
+      },
+      "milestone": {
+        "label": "Milestone Sprint",
+        "done": 4,
+        "total": 7
+      },
+      "quickActions": [
+        {
+          "label": "VS Code",
+          "icon": "code",
+          "kbd": "C"
+        },
+        {
+          "label": "Terminal",
+          "icon": "terminal",
+          "kbd": "T"
+        }
+      ],
+      "modifiedAt": "2026-11-22T13:47:00+01:00"
+    },
+    {
+      "id": "flow-gateway",
+      "name": "flow-gateway",
+      "path": "~/Dev/flow-gateway",
+      "icon": "globe",
+      "accent": "secondary",
+      "categories": [
+        "backend"
+      ],
+      "status": "online",
+      "port": 8080,
+      "stack": [
+        {
+          "label": "Go 1.22",
+          "tone": "secondary"
+        },
+        {
+          "label": "gRPC",
+          "tone": "neutral"
+        },
+        {
+          "label": "Cache",
+          "tone": "neutral"
+        },
+        {
+          "label": "Envoy",
+          "tone": "neutral"
+        }
+      ],
+      "dashboardTags": [
+        {
+          "label": "Go",
+          "tone": "secondary"
+        },
+        {
+          "label": "gRPC",
+          "tone": "neutral"
+        },
+        {
+          "label": "Proxy",
+          "tone": "tertiary"
+        }
+      ],
+      "git": {
+        "branch": "feat/routing",
+        "state": "modified",
+        "modified": 3
+      },
+      "row2": {
+        "left": {
+          "label": "Swagger / Proto",
+          "icon": "external"
+        },
+        "right": {
+          "label": "gRPC Protobuf v2",
+          "tone": "neutral"
+        }
+      },
+      "milestone": {
+        "label": "Gateway v2.0",
+        "done": 2,
+        "total": 5
+      },
+      "quickActions": [
+        {
+          "label": "Goland",
+          "icon": "code"
+        },
+        {
+          "label": "Logs :8080",
+          "icon": "terminal"
+        }
+      ],
+      "modifiedAt": "2026-11-22T11:20:00+01:00"
+    },
+    {
+      "id": "cloud-analytics",
+      "name": "cloud-analytics",
+      "path": "~/Dev/cloud-analytics",
+      "icon": "chart",
+      "accent": "primary",
+      "categories": [
+        "web",
+        "containerized"
+      ],
+      "status": "online",
+      "port": 3000,
+      "stack": [
+        {
+          "label": "Next.js 14",
+          "tone": "surface"
+        },
+        {
+          "label": "TS",
+          "tone": "secondary"
+        },
+        {
+          "label": "Tailwind",
+          "tone": "neutral"
+        },
+        {
+          "label": "ClickHouse",
+          "tone": "tertiary"
+        }
+      ],
+      "dashboardTags": [
+        {
+          "label": "Next.js 14",
+          "tone": "primary"
+        },
+        {
+          "label": "TypeScript",
+          "tone": "secondary"
+        },
+        {
+          "label": "Tailwind",
+          "tone": "neutral"
+        }
+      ],
+      "git": {
+        "branch": "fix/telemetry",
+        "state": "modified",
+        "modified": 1
+      },
+      "gitRight": {
+        "label": "staging.internal",
+        "icon": "external",
+        "href": "https://analytics-stage.internal",
+        "tone": "secondary"
+      },
+      "row2": {
+        "left": {
+          "label": "Fast Refresh Ready",
+          "dot": "primary"
+        },
+        "right": {
+          "label": "Vercel Build #149"
+        }
+      },
+      "milestone": {
+        "label": "Sprint Q3.3",
+        "done": 8,
+        "total": 9
+      },
+      "quickActions": [
+        {
+          "label": "VS Code",
+          "icon": "code"
+        },
+        {
+          "label": "Open :3000",
+          "icon": "external"
+        }
+      ],
+      "modifiedAt": "2026-11-21T18:05:00+01:00"
+    },
+    {
+      "id": "auth-daemon",
+      "name": "auth-daemon",
+      "path": "~/Dev/auth-daemon",
+      "icon": "lock",
+      "accent": "tertiary",
+      "categories": [
+        "backend",
+        "containerized"
+      ],
+      "status": "conflict",
+      "conflictPort": 5432,
+      "stack": [
+        {
+          "label": "Node.js",
+          "tone": "tertiary"
+        },
+        {
+          "label": "PostgreSQL",
+          "tone": "neutral"
+        },
+        {
+          "label": "Prisma",
+          "tone": "neutral"
+        },
+        {
+          "label": "Docker",
+          "tone": "neutral"
+        }
+      ],
+      "dashboardTags": [
+        {
+          "label": "Node",
+          "tone": "secondary"
+        },
+        {
+          "label": "Postgres",
+          "tone": "tertiary"
+        },
+        {
+          "label": "Blocked",
+          "tone": "error"
+        }
+      ],
+      "git": {
+        "branch": "staging",
+        "state": "synced",
+        "modified": 0
+      },
+      "gitRight": {
+        "label": "Compose file",
+        "icon": "layers",
+        "tone": "outline"
+      },
+      "milestone": {
+        "label": "OAuth2 Migration",
+        "done": 1,
+        "total": 4
+      },
+      "quickActions": [
+        {
+          "label": "VS Code",
+          "icon": "code"
+        },
+        {
+          "label": "Docker CLI",
+          "icon": "download",
+          "tone": "tertiary"
+        }
+      ],
+      "modifiedAt": "2026-11-20T09:30:00+01:00"
+    },
+    {
+      "id": "design-system-tokens",
+      "name": "design-system-tokens",
+      "path": "~/Dev/libs/tokens",
+      "icon": "settings",
+      "accent": "primary",
+      "categories": [
+        "web"
+      ],
+      "status": "library",
+      "badge": "Package v2.1.0",
+      "stack": [
+        {
+          "label": "Core Tokens",
+          "tone": "surface"
+        },
+        {
+          "label": "CSS / SCSS",
+          "tone": "secondary"
+        },
+        {
+          "label": "npm Registry",
+          "tone": "neutral"
+        }
+      ],
+      "dashboardTags": [
+        {
+          "label": "CSS",
+          "tone": "secondary"
+        },
+        {
+          "label": "npm",
+          "tone": "neutral"
+        }
+      ],
+      "git": {
+        "branch": "main",
+        "state": "synced",
+        "modified": 0
+      },
+      "row2": {
+        "left": {
+          "label": "Storybook Docs",
+          "icon": "book"
+        },
+        "right": {
+          "label": "Clean tree"
+        }
+      },
+      "milestone": {
+        "label": "Release Target",
+        "done": 5,
+        "total": 5
+      },
+      "quickActions": [
+        {
+          "label": "VS Code",
+          "icon": "code"
+        },
+        {
+          "label": "Build npm",
+          "icon": "box"
+        }
+      ],
+      "modifiedAt": "2026-11-18T16:00:00+01:00"
+    },
+    {
+      "id": "neural-inference-engine",
+      "name": "neural-inference-engine",
+      "path": "~/Dev/ai/engine",
+      "icon": "network",
+      "accent": "outline",
+      "categories": [
+        "rust",
+        "containerized"
+      ],
+      "status": "inactive",
+      "startPort": 4000,
+      "stack": [
+        {
+          "label": "Python 3.11",
+          "tone": "secondary"
+        },
+        {
+          "label": "Torch / ONNX",
+          "tone": "neutral"
+        },
+        {
+          "label": "FastAPI",
+          "tone": "neutral"
+        }
+      ],
+      "dashboardTags": [
+        {
+          "label": "Python",
+          "tone": "secondary"
+        },
+        {
+          "label": "FastAPI",
+          "tone": "neutral"
+        }
+      ],
+      "git": {
+        "branch": "dev",
+        "state": "modified",
+        "modified": 4
+      },
+      "row2": {
+        "left": {
+          "label": "Model weights (.bin)",
+          "icon": "box"
+        },
+        "right": {
+          "label": "Offline",
+          "tone": "outline"
+        }
+      },
+      "milestone": {
+        "label": "Quantization Tasks",
+        "done": 3,
+        "total": 8
+      },
+      "quickActions": [
+        {
+          "label": "PyCharm",
+          "icon": "code"
+        },
+        {
+          "label": "Jupyter",
+          "icon": "terminal"
+        }
+      ],
+      "modifiedAt": "2026-11-15T21:10:00+01:00"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "t1",
+      "projectId": "nexus-desktop",
+      "title": "Implement Tauri port scanner background thread",
+      "scope": "Core",
+      "scopeTone": "primary",
+      "tag": "ipc",
+      "priority": "HIGH",
+      "due": "Today",
+      "dueTone": "secondary",
+      "done": false,
+      "focus": {
+        "order": 1,
+        "hint": {
+          "icon": "clock",
+          "label": "Due 5:00 PM",
+          "tone": "secondary"
+        }
+      }
+    },
+    {
+      "id": "t2",
+      "projectId": "nexus-desktop",
+      "title": "Add process memory footprint widget to sidebar",
+      "scope": "UI",
+      "scopeTone": "secondary",
+      "tag": "metrics",
+      "priority": "NORMAL",
+      "due": "Tomorrow",
+      "done": false,
+      "focus": {
+        "order": 4,
+        "note": "Low friction"
+      }
+    },
+    {
+      "id": "t3",
+      "projectId": "nexus-desktop",
+      "title": "Run SQLite migration for workspace config cache",
+      "scope": "DB",
+      "scopeTone": "tertiary",
+      "tag": "storage",
+      "priority": "NORMAL",
+      "due": "In 2 days",
+      "done": false
+    },
+    {
+      "id": "t4",
+      "projectId": "nexus-desktop",
+      "title": "Configure multi-platform cross-compilation pipeline",
+      "scope": "Build",
+      "priority": "NORMAL",
+      "done": true,
+      "doneAt": "2h ago",
+      "doneToday": true
+    },
+    {
+      "id": "t5",
+      "projectId": "nexus-desktop",
+      "title": "Hook window focus listener to global shortcut ⌘+Space",
+      "scope": "IPC",
+      "priority": "NORMAL",
+      "done": true,
+      "doneAt": "Yesterday"
+    },
+    {
+      "id": "t6",
+      "projectId": "flow-gateway",
+      "title": "Fix CORS header on daemon :8080 proxy handler",
+      "scope": "Proxy",
+      "port": ":8080",
+      "priority": "URGENT",
+      "due": "Immediate",
+      "dueTone": "error",
+      "done": false,
+      "highlight": true,
+      "focus": {
+        "order": 2,
+        "hint": {
+          "icon": "alert",
+          "label": "Blocker",
+          "tone": "error"
+        }
+      }
+    },
+    {
+      "id": "t7",
+      "projectId": "flow-gateway",
+      "title": "Benchmark gRPC stream throughput on 10k concurrent connections",
+      "scope": "Perf",
+      "priority": "HIGH",
+      "due": "Next Week",
+      "done": false
+    },
+    {
+      "id": "t8",
+      "projectId": "flow-gateway",
+      "title": "Update Proto buf schemas to v2.4",
+      "scope": "API",
+      "priority": "NORMAL",
+      "due": "Backlog",
+      "done": false
+    },
+    {
+      "id": "t9",
+      "projectId": "auth-daemon",
+      "title": "Resolve port 5432 container collision with local Postgres",
+      "scope": "Docker",
+      "port": ":5432",
+      "priority": "URGENT",
+      "due": "Collision",
+      "dueTone": "tertiary",
+      "done": false,
+      "highlight": true,
+      "focus": {
+        "order": 3,
+        "hint": {
+          "icon": "zap",
+          "label": "Port Conflict",
+          "tone": "tertiary"
+        }
+      }
+    },
+    {
+      "id": "t10",
+      "projectId": "auth-daemon",
+      "title": "Rotate OAuth2 refresh secret tokens in staging .env",
+      "scope": "Security",
+      "priority": "NORMAL",
+      "due": "Tomorrow",
+      "done": false
+    }
+  ],
+  "processes": [
+    {
+      "pid": 48291,
+      "port": 3000,
+      "protocol": "TCP",
+      "projectId": "cloud-analytics",
+      "command": "node server.js",
+      "memoryMb": 142.8,
+      "cpuPct": 1.2,
+      "status": "listening"
+    },
+    {
+      "pid": 31204,
+      "port": 1420,
+      "protocol": "TCP",
+      "projectId": "nexus-desktop",
+      "command": "cargo tauri dev",
+      "memoryMb": 64.2,
+      "cpuPct": 0.8,
+      "status": "listening"
+    },
+    {
+      "pid": 9912,
+      "port": 5432,
+      "protocol": "TCP",
+      "projectId": "auth-daemon",
+      "command": "docker-proxy / postgres",
+      "memoryMb": 18.4,
+      "cpuPct": 0.4,
+      "status": "collision"
+    },
+    {
+      "pid": 14092,
+      "port": 8080,
+      "protocol": "TCP",
+      "projectId": "flow-gateway",
+      "command": "go run ./cmd/proxy",
+      "memoryMb": 31.0,
+      "cpuPct": 0.5,
+      "status": "listening"
+    }
+  ],
+  "staticPorts": [
+    {
+      "id": "sp1",
+      "port": 5432,
+      "projectId": "auth-daemon",
+      "file": "docker-compose.yml",
+      "fileIcon": "doc",
+      "fileAnchor": "#db",
+      "line": 14,
+      "key": "POSTGRES_PORT",
+      "note": "primary db container",
+      "status": "conflict",
+      "conflictPid": 9912
+    },
+    {
+      "id": "sp2",
+      "port": 6379,
+      "projectId": "flow-gateway",
+      "file": ".env",
+      "fileIcon": "doc",
+      "key": "REDIS_CACHE_URL",
+      "note": "local Redis cache",
+      "status": "offline"
+    },
+    {
+      "id": "sp3",
+      "port": 9090,
+      "projectId": "nexus-desktop",
+      "file": "application.properties",
+      "fileIcon": "code",
+      "key": "management.server.port",
+      "note": "Prometheus metrics",
+      "status": "offline"
+    },
+    {
+      "id": "sp4",
+      "port": 4000,
+      "projectId": "neural-inference-engine",
+      "file": "Dockerfile",
+      "fileIcon": "box",
+      "key": "EXPOSE 4000",
+      "note": "FastAPI inference worker",
+      "status": "offline"
+    }
+  ],
+  "projectDetails": {
+    "nexus-desktop": {
+      "uncommitted": 2,
+      "lastCommit": {
+        "sha": "a8f91c2",
+        "message": "feat: add port scanner IPC handler",
+        "when": "14m ago"
+      },
+      "aheadBy": 3,
+      "repoUrl": "https://github.com/nexus/desktop",
+      "processes": [
+        {
+          "port": 1420,
+          "label": "Vite Frontend",
+          "pid": 31284,
+          "memoryMb": 64.2,
+          "openUrl": "http://localhost:1420"
+        },
+        {
+          "port": 8899,
+          "label": "Tauri Core IPC Socket",
+          "pid": 31290,
+          "memoryMb": 28.5
+        }
+      ],
+      "uptime": "3h 42m",
+      "configuredPorts": [
+        {
+          "port": 1420,
+          "source": "package.json",
+          "key": "scripts.dev",
+          "status": "active"
+        },
+        {
+          "port": 8080,
+          "source": ".env.local",
+          "key": "VITE_API_URL",
+          "status": "offline"
+        },
+        {
+          "port": 5432,
+          "source": "docker-compose.yml",
+          "key": "services.db",
+          "status": "conflict"
+        }
+      ],
+      "envLinks": [
+        {
+          "id": "l1",
+          "kind": "github",
+          "label": "github.com/nexus/desktop",
+          "href": "https://github.com/nexus/desktop"
+        },
+        {
+          "id": "l2",
+          "kind": "jira",
+          "label": "NEXUS-402 (Current Sprint)",
+          "href": "#"
+        },
+        {
+          "id": "l3",
+          "kind": "staging",
+          "label": "staging.nexus.internal",
+          "href": "#",
+          "badge": {
+            "label": "Healthy",
+            "tone": "primary"
+          }
+        },
+        {
+          "id": "l4",
+          "kind": "prod",
+          "label": "app.nexus.dev",
+          "href": "#",
+          "badge": {
+            "label": "v1.3.9",
+            "tone": "neutral",
+            "mono": true
+          }
+        }
+      ],
+      "commits": [
+        {
+          "sha": "a8f91c2",
+          "message": "feat: add port scanner IPC handler",
+          "path": "nexus-core / src-tauri/src/ports.rs",
+          "when": "14m ago",
+          "tone": "primary"
+        },
+        {
+          "sha": "4b209e1",
+          "message": "fix: reconcile orphan process ports on exit",
+          "path": "daemon / sys_watcher.rs",
+          "when": "3h ago",
+          "tone": "secondary"
+        },
+        {
+          "sha": "91f03d8",
+          "message": "refactor: use JetBrains Mono metrics in shell",
+          "path": "frontend / tailwind.config.js",
+          "when": "1d ago",
+          "tone": "neutral"
+        }
+      ],
+      "todoPath": "~/Dev/nexus-desktop/TODO.md"
+    }
+  },
+  "settings": {
+    "folders": [
+      {
+        "path": "~/IdeaProjects",
+        "primary": true,
+        "repoCount": 12
+      },
+      {
+        "path": "~/Work/clients",
+        "primary": false,
+        "repoCount": 4
+      }
+    ],
+    "autoScan": true,
+    "ignored": "node_modules, target, .git, dist, build, .next",
+    "ide": "vscode",
+    "ideCommand": "code .",
+    "terminal": "warp",
+    "terminalArgs": "warp --new-tab {path}",
+    "twoWaySync": true,
+    "manifestName": "TODO.md",
+    "customManifest": ".nexus/tasks.json",
+    "pollInterval": "2s",
+    "notifyCollision": true
+  }
+}
